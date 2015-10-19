@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+  function update() {
   var num = parseInt(location.hash.substr(1));
   console.log(num);
   $.get('/whale/txt/' + num + '.txt', function(txt)) {
@@ -9,4 +10,7 @@ jQuery(document).ready(function($) {
   if (isNan(num)) {
     num = 0;
   }
+}
+update();
+window.addEventListener('hashchange', update, false);
 });
