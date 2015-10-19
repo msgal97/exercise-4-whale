@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
   $.get('/whale/txt/' + num + '.txt', function(txt)) {
     $('a').html(txt);
     $('a').attr('href', '#' + (num +1));
-    //cosole.log(txt);
+    cosole.log(txt);
   }
   if (isNan(num)) {
     num = 0;
